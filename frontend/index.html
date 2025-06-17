@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EMEX</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-profile.css">
+    <link rel="SHORTCUT ICON" href="img/img2/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="white-background">
+            <div class="content-wrapper">
+                <div class="top-bar">
+                    <div class="content-container">
+                    </div>
+                    <div class="header-buttons">
+                        <button id="login-btn" class="login-btn">Вход</button>
+                        <div id="profile-btn-container" style="display:none;">
+                            <button id="profile-btn" class="login-btn"></button>
+                            <div id="profile-dropdown" style="display:none;">
+                                <button id="profile-link" class="login-btn">Профиль</button>
+                                <button id="logout-btn" class="login-btn">Выход</button>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <div class="yellow-background">
+            <div class="content-wrapper">
+              <div class="main-bar">
+                <div class="main-bar-section logo">
+                  <img src="img/logo.svg" alt="Логотип" class="logo-icon">
+                </div>
+                
+                <div class="main-bar-section search">
+                    <div class="search-wrapper">
+                    <input type="text" class="search-input" placeholder="Поиск по артикулу">
+                    <button class="search-button">
+                        <img src="img/search.svg" alt="Поиск" class="search-icon">
+                    </button>
+                    </div>
+                </div>
+
+                    <!-- === Блок с результатами поиска === -->
+                    <div id="search-results" class="search-results hidden"></div>
+                    
+      <div class="main-bar-section cart">
+                <a href="cart.html" class="cart-link">
+                  <div class="cart">
+                    <img src="img/cart.svg" alt="Корзина" class="icon">
+                    <span class="cart-text">Корзина</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+    </div>
+        <div class="black-background">
+        <div class="content-wrapper">
+        <nav class="nav-bar" id="main-nav">
+                    <a href="index.html">Главная</a>
+                    <a href="job.html">Вакансии</a>
+                    <a href="about-company.html">О компании</a>
+                    <a href="contact.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+        <div class="main-block">
+            <img src="img/block1.svg" alt="Автозапчасти" class="main-image">
+            <div class="text-overlay">
+                <h1 class="main-heading">Автозапчасти вовремя</h1>
+                <p class="sub-heading">47 млн автозапчастей по актуальным ценам напрямую от производителей.<br>Привезем в пункт выдачи или доставим курьером к вам.</p>
+                <p class="free-delivery">* Бесплатная доставка по городу</p>
+    
+                <button class="catalog-button" id="catalog-button">КАТАЛОГ</button>
+            </div>
+        </div>
+                <div class="yellow-strip">
+                    <div class="yellow-strip-content">
+                        <div class="yellow-strip-item">
+                            <img src="img/ico1.svg" alt="Контроль качества" class="yellow-strip-icon">
+                            <div class="yellow-strip-text">
+                                Контроль качества <br> всех товаров
+                            </div>
+                        </div>
+                        <div class="yellow-strip-item">
+                            <img src="img/ico2.svg" alt="Бесплатный возврат" class="yellow-strip-icon">
+                            <div class="yellow-strip-text">
+                                Бесплатный <br> возврат
+                            </div>
+                        </div>
+                        <div class="yellow-strip-item">
+                            <img src="img/ico3.svg" alt="Год основания компании" class="yellow-strip-icon">
+                            <div class="yellow-strip-text">
+                                год основания <br> компании
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rectangles-block">
+                    <div class="rectangle rectangle-yellow" data-category="category1">
+                    <div class="rectangle-text">Часто <br> покупают</div>
+                    <img src="img/heart_block1-1.svg" class="rectangle-icon" alt="">
+                    </div>
+                    <div class="rectangle rectangle-black" data-category="category2">
+                    <div class="rectangle-text">Запчасти из-за <br> границы</div>
+                    <img src="img/block1-2.svg" class="rectangle-icon" alt="">
+                    </div>
+                    <div class="rectangle rectangle-black" data-category="category3">
+                    <div class="rectangle-text">Автотовары</div>
+                    <img src="img/block1-3.svg" class="rectangle-icon" alt="">
+                    </div>
+                    <div class="rectangle rectangle-black" data-category="category4">
+                    <div class="rectangle-text">Инструменты <br> для СТО</div>
+                    <img src="img/block1-4.svg" class="rectangle-icon" alt="">
+                    </div>
+                </div>  
+                <div class="product-grid">
+                    <div class="product-cell">
+                        <a href="/product.html?id=685062d2141a50edf43b36e2">
+                            <img src="img/tovar1.svg" alt="Product 1">
+                        </a>
+                        <div class="product-info">
+                            <div class="product-price">3291 ₽</div>
+                            <div class="product-name">Моторное масло SHELL Helix Ultra ECT C3</div>
+                            <div class="product-article">103761157049</div>
+                        </div>
+                    </div>
+                    <div class="product-cell">
+                        <a href="/product.html?id=68507f6f141a50edf43b3710">
+                            <img src="img/tovar2.svg" alt="Product 2">
+                        </a>
+                        <div class="product-info">
+                            <div class="product-price">1988 ₽</div>
+                            <div class="product-name">Масло моторное SLT Неliх Ultrа</div>
+                            <div class="product-article">550046387</div>
+                        </div>
+                    </div>
+                    <div class="product-cell">
+                        <a href="/product.html?id=685118de79966544754e148a">
+                            <img src="img/tovar3.svg" alt="Product 3">
+                        </a>
+                        <div class="product-info">
+                            <div class="product-price">12415 ₽</div>
+                            <div class="product-name">Лобовое стекло Volkswagen Passat CC</div>
+                            <div class="product-article">944048322</div>
+                        </div>
+                    </div>
+                    <div class="product-cell">
+                        <a href="/product.html?id=68511b4e79966544754e14a8">
+                            <img src="img/tovar4.svg" alt="Product 4">
+                        </a>
+                        <div class="product-info">
+                            <div class="product-price">1357 ₽</div>
+                            <div class="product-name">Комплект свечей зажигания NGK BPR6ES</div>
+                            <div class="product-article">944048321</div>
+                        </div>
+                    </div>
+                    <div class="product-cell">
+                        <a href="/product.html?id=68511dca79966544754e14c7">
+                            <img src="img/tovar5.svg" alt="Product 5">
+                        </a>
+                        <div class="product-info">
+                            <div class="product-price">666 ₽</div>
+                            <div class="product-name">Фильтр масляный Лада Гранта</div>
+                            <div class="product-article">944048327</div>
+                        </div>
+                    </div>
+                    <div class="product-cell">
+                        <a href="/product.html?id=68511f3779966544754e14de">
+                            <img src="img/tovar6.svg" alt="Product 6">
+                        </a>
+                        <div class="product-info">
+                            <div class="product-price">152 ₽</div>
+                            <div class="product-name">Пробка сливная масляного поддона двигателя с прокладкой VAG Audi Seat Skoda Volkswagen</div>
+                            <div class="product-article">955548327</div>
+                        </div>
+                    </div>
+                </div>
+        <div class="related-products">
+            <div class="related-products-header">
+                <span>Сопутствующие товары</span>
+                <div class="line"></div>
+            </div>
+            <div class="related-products-content">
+                <div class="related-product-box">
+                    <div class="circle"></div>
+                    <div class="product-content">
+                        <div class="text">
+                            Моторные масла <br> Genesis
+                        </div>
+                        <div class="image image-1"></div>
+                        <a href="/product.html?id=685185bb1588964be10b5294" class="button">Перейти →</a>
+                    </div>
+                </div>
+                <div class="related-product-box">
+                    <div class="circle"></div>
+                    <div class="product-content">
+                        <div class="text">
+                            Моторные масла <br> Premium
+                        </div>
+                        <div class="image image-2"></div>
+                        <a href="/product.html?id=6851863c1588964be10b52ab" class="button">Перейти →</a>
+                    </div>
+                </div>
+                <div class="related-product-box">
+                    <div class="circle"></div>
+                    <div class="product-content">
+                        <div class="text">
+                            Моторные масла <br> Ultra
+                        </div>
+                        <div class="image image-3"></div>
+                        <a href="/product.html?id=685186e21588964be10b52be" class="button">Перейти →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products oils-section">
+            <div class="related-products-header">
+                <span>Автомасла</span>
+                <div class="line shorter-line"></div>
+            </div>
+            <div class="related-products-content">
+            </div>
+        </div>
+        <div class="container">
+            <div class="oil-product-card">
+                <div class="circle-wrapper">
+                    <img src="img/circle-big.svg" alt="Декоративный круг" />
+                </div>
+                <img src="img/bb1.svg" alt="Изображение масла" class="oil-image" />
+            </div>
+            <div class="small-rectangles">
+                <div class="product-cell">
+                    <a href="/product.html?id=685188ca1588964be10b5343"><img src="img/bb2.svg" alt="Product 1" /></a>
+                    <div class="product-info">
+                        <div class="product-price">2652 ₽</div>
+                        <div class="product-name">Масло моторное Motor Oil 5W-40 <br> синтетическое 1 л</div>
+                        <div class="product-article">90090032</div>
+                    </div>
+                </div>
+                <div class="product-cell">
+                    <a href="/product.html?id=6851895c1588964be10b5352"><img src="img/tov1.svg" alt="Product 2" /></a>
+                    <div class="product-info">
+                        <div class="product-price">963 ₽</div>
+                        <div class="product-name">Масло моторное синтетика <br> 1 л.</div>
+                        <div class="product-article">601214738</div>
+                    </div>
+                </div>
+                <div class="product-cell">
+                    <a href="/product.html?id=68518b1b1588964be10b5365"><img src="img/bb3.svg" alt="Product 3" /></a>
+                    <div class="product-info">
+                        <div class="product-price">1428 ₽</div>
+                        <div class="product-name">Масло моторное Gazpromneft  5 л.</div>
+                        <div class="product-article">2389901319</div>
+                    </div>
+                </div>
+                <div class="product-cell">
+                    <a href="/product.html?id=68518bc41588964be10b536a"><img src="img/tov4.svg" alt="Product 4" /></a>
+                    <div class="product-info">
+                        <div class="product-price">1327 ₽</div>
+                        <div class="product-name">Масло моторное ЛУКОЙЛ 5 л.</div>
+                        <div class="product-article">3705305</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stores-section">
+            <div class="stores-header">
+                <span>Магазины в вашем городе</span>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="map-container">
+                <script type="text/javascript" charset="utf-8" async 
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf322cd394a1addd4829397b42992c7c01701f04d4015d29858b745ca8b181da&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+                </script>
+            </div>
+        </div>
+<div class="footer">
+    <span class="footer-text">emex</span>
+</div>
+<script src="script-product.js"></script>
+<script src="script.js"></script>
+<script src="script-profile.js"></script>
+<script src="header.js" defer></script>
+</body>
+</html>

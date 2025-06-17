@@ -1,0 +1,361 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMEX</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-catalog.css">
+</head>
+<body>
+    <header class="header">
+        <div class="white-background">
+            <div class="content-wrapper">
+                <div class="top-bar">
+                    <div class="content-container">
+                        <div class="location">
+                            <button class="location-btn" onclick="toggleDropdown()">
+                                <span id="selected-city">Оренбург</span>
+                                <img src="img/arrow.svg" alt="Стрелка" class="icon small-icon">
+                            </button>
+                            <div class="city-dropdown" id="city-dropdown">
+                                <input type="text" placeholder="Введите город..." oninput="filterCities()" id="city-search">
+                                <ul id="city-list">
+                                    <li onclick="selectCity('Москва')">Москва</li>
+                                    <li onclick="selectCity('Санкт-Петербург')">Санкт-Петербург</li>
+                                    <li onclick="selectCity('Новосибирск')">Новосибирск</li>
+                                    <li onclick="selectCity('Оренбург')">Оренбург</li>
+                                    <li onclick="selectCity('Казань')">Казань</li>
+                                    <li onclick="selectCity('Челябинск')">Челябинск</li>
+                                    <li onclick="selectCity('Самара')">Самара</li>
+                                    <li onclick="selectCity('Уфа')">Уфа</li>
+                                    <li onclick="selectCity('Ростов-на-Дону')">Ростов-на-Дону</li>
+                                    <li onclick="selectCity('Екатеринбург')">Екатеринбург</li>
+                                    <li onclick="selectCity('Волгоград')">Волгоград</li>
+                                    <li onclick="selectCity('Томск')">Томск</li>
+                                    <li onclick="selectCity('Красноярск')">Красноярск</li>
+                                    <li onclick="selectCity('Воронеж')">Воронеж</li>
+                                    <li onclick="selectCity('Пермь')">Пермь</li>
+                                    <li onclick="selectCity('Нижний Новгород')">Нижний Новгород</li>
+                                    <li onclick="selectCity('Калуга')">Калуга</li>
+                                    <li onclick="selectCity('Тула')">Тула</li>
+                                    <li onclick="selectCity('Иркутск')">Иркутск</li>
+                                    <li onclick="selectCity('Омск')">Омск</li>
+                                    <li onclick="selectCity('Краснодар')">Краснодар</li>
+                                    <li onclick="selectCity('Кувандык')">Кувандык</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-buttons">
+                      <button id="login-btn" class="login-btn">Вход</button>
+                      <div id="profile-btn-container" style="display:none;">
+                          <button id="profile-btn" class="login-btn"></button>
+                          <div id="profile-dropdown" style="display:none;">
+                              <button id="profile-link" class="login-btn">Профиль</button>
+                              <button id="logout-btn" class="login-btn">Выход</button>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="yellow-background">
+            <div class="content-wrapper">
+                <div class="main-bar">
+                    <div class="logo">
+                        <img src="img/logo.svg" alt="Логотип" class="logo-icon">
+                    </div>
+<div class="search-block">
+    <div class="burger-menu">
+        <img src="img/lines.svg" alt="Меню" class="icon menu-icon">
+    </div>
+    <div class="catalog" id="catalog">
+        <ul>
+        <li><a href="#">Каталог запчастей</a></li>
+        <li><a href="#">Каталог ТО</a></li>
+        <li class="has-submenu">
+            <a href="#">Шины и диски</a>
+            <ul class="submenu">
+                <li><a href="#">Шины</a></li>
+                <li><a href="#">Диски</a></li>
+                <li><a href="#">Камеры</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">Масла и автохимия</a>
+            <ul class="submenu">
+                <li class="has-submenu">
+                    <a href="#">Масла</a>
+                    <ul class="submenu">
+                        <li><a href="#">Гидравлические</a></li>
+                        <li><a href="#">Моторные</a></li>
+                        <li><a href="#">Индустриальные редукторные</a></li>
+                        <li><a href="#">Промывочные</a></li>
+                        <li><a href="#">Трансмиссионные</a></li>
+                        <li><a href="#">Амортизаторные</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">Жидкости</a>
+                    <ul class="submenu">
+                        <li><a href="#">AdBlue</a></li>
+                        <li><a href="#">Охлаждающие</a></li>
+                        <li><a href="#">Стеклоомыватель</a></li>
+                        <li><a href="#">Тормозные</a></li>
+                        <li><a href="#">Прикладки</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Смазки</a></li>
+                <li><a href="#">Уход и чистка</a></li>
+                <li><a href="#">Автокосметика</a></li>
+                <li><a href="#">Остальное</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">Электрооборудование</a>
+            <ul class="submenu">
+                <li><a href="#">Аккумуляторы</a></li>
+                <li><a href="#">Батарейки</a></li>
+                <li><a href="#">Лампы</a></li>
+                <li><a href="#">Мойки высокого давления</a></li>
+                <li><a href="#">Подметальные машины</a></li>
+                <li><a href="#">Провода пусковые</a></li>
+                <li><a href="#">Пылесосы</a></li>
+                <li><a href="#">Устройства пуско-зарядные</a></li>
+                <li><a href="#">Компрессоры</a></li>
+                <li><a href="#">Насосы и манометры</a></li>
+                <li><a href="#">Видеорегистраторы</a></li>
+                <li><a href="#">Автозвук</a></li>
+                <li><a href="#">Парковочные радары и камеры</a></li>
+                <li><a href="#">Противоугонные устройства</a></li>
+                <li><a href="#">Подогреватели двигателя</a></li>
+                <li><a href="#">Радар-детекторы</a></li>
+                <li><a href="#">Остальное</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">Инструменты</a>
+            <ul class="submenu">
+                <li><a href="#">Головки торцевые</a></li>
+                <li><a href="#">Домкраты</a></li>
+                <li><a href="#">Ключи баллонные</a></li>
+                <li><a href="#">Наборы инструментов</a></li>
+                <li><a href="#">Отвёртки</a></li>
+                <li><a href="#">Хомуты</a></li>
+                <li><a href="#">Ручной инструмент</a></li>
+                <li><a href="#">Компрессоры</a></li>
+                <li><a href="#">Насосы и манометры</a></li>
+                <li><a href="#">Электроинструмент</a></li>
+                <li><a href="#">Пневмоинструмент</a></li>
+                <li><a href="#">Измерительный инстр.</a></li>
+                <li><a href="#">Хранение инструмента</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">Экстерьер</a>
+            <ul class="submenu">
+                <li><a href="#">Дефлекторы</a></li>
+                <li><a href="#">Защита на автомобиль</a></li>
+                <li><a href="#">Фаркопы</a></li>
+                <li><a href="#">Багажные системы</a></li>
+                <li><a href="#">Внешний декор</a></li>
+                <li><a href="#">Щётки стеклоочистителя</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a href="#">Остальное</a>
+            <ul class="submenu">
+                <li><a href="#">Автоодеяла</a></li>
+                <li><a href="#">Защита и гигиена</a></li>
+                <li><a href="#">Велосипеды</a></li>
+                <li><a href="#">Герметики</a></li>
+                <li><a href="#">Жилеты светоотражающие сигнальные</a></li>
+                <li><a href="#">Клеи</a></li>
+                <li><a href="#">Канистры</a></li>
+                <li><a href="#">Очистка от снега, льда и воды</a></li>
+                <li><a href="#">Ремни поликлиновые</a></li>
+                <li><a href="#">Светофильтры</a></li>
+                <li><a href="#">Для автосервиса</a></li>
+                <li><a href="#">Расходные материалы</a></li>
+                <li><a href="#">Автолитература</a></li>
+                <li><a href="#">Сувенирная продукция</a></li>
+                <li><a href="#">Лебёдки</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                        <input type="text" class="search-input" placeholder="Поиск...">
+                        <button class="search-button">
+                            <img src="img/search.svg" alt="Поиск" class="icon search-icon">
+                        </button>
+                    </div>
+                    <a href="/cart" class="cart-link">
+                        <div class="cart">
+                            <img src="img/cart.svg" alt="Корзина" class="icon">
+                            <span class="cart-text">Корзина</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="black-background">
+            <div class="content-wrapper">
+                <nav class="nav-bar">
+                    <a href="index.html">Главная</a>
+                    <a href="job.html">Вакансии</a>
+                    <a href="about-company.html">О компании</a>
+                    <a href="contact.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+<main>
+  <div class="container">
+    <h1>Шины</h1>
+
+    <div class="button-group">
+      <button id="priceBtn" class="btn">Цены</button>
+      <button id="popularBtn" class="btn">Популярные</button>
+    </div>
+    <div class="catalog-section">
+      <div class="products-wrapper">
+        <div class="product-cell">
+          <a href="#"><img src="img/cart1.svg" alt="Product 1" /></a>
+          <div class="product-info">
+            <div class="product-price">7 021 ₽</div>
+            <div class="product-name">Масло моторное 229.3/229.5, 5л</div>
+            <div class="product-article">МБ РУС·A000989210713MBR</div>
+          </div>
+        </div>
+        <div class="product-cell">
+          <a href="#"><img src="img/cart2.svg" alt="Product 2" /></a>
+          <div class="product-info">
+            <div class="product-price">7 073 ₽</div>
+            <div class="product-name">Масло моторное 229.51, 5л</div>
+            <div class="product-article">МБ РУС·A000989220713MBR</div>
+          </div>
+        </div>
+        <div class="product-cell">
+          <a href="#"><img src="img/cart3.svg" alt="Product 3" /></a>
+          <div class="product-info">
+            <div class="product-price">78 929 ₽</div>
+            <div class="product-name">Стекло лобовое для Mercedes-Benz GLE</div>
+            <div class="product-article">МБ РУС·A1666705400MB</div>
+          </div>
+        </div>
+        <div class="product-cell">
+          <a href="#"><img src="img/cart4.svg" alt="Product 4" /></a>
+          <div class="product-info">
+            <div class="product-price">189 ₽</div>
+            <div class="product-name">Свеча зажигания</div>
+            <div class="product-article">Denso·K16RU11</div>
+          </div>
+        </div>
+      </div>
+      <aside class="filter-panel">
+        <h3 class="filter-header">Фильтрация</h3>
+        <input type="text" placeholder="Название и свойство" class="searchs-input" />
+
+        <div class="filter">
+          <div class="filter-header" onclick="toggleFilter('width')">
+            <span>Ширина, мм</span><span class="toggle">+</span>
+          </div>
+          <div class="filter-options" id="width">
+            <label><input type="checkbox" /> 175</label>
+            <label><input type="checkbox" /> 185</label>
+            <label><input type="checkbox" /> 195</label>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-header" onclick="toggleFilter('height')">
+            <span>Высота профиля</span><span class="toggle">+</span>
+          </div>
+          <div class="filter-options" id="height">
+            <label><input type="checkbox" /> 50</label>
+            <label><input type="checkbox" /> 55</label>
+            <label><input type="checkbox" /> 60</label>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-header" onclick="toggleFilter('diameter')">
+            <span>Диаметр, дюйм</span><span class="toggle">+</span>
+          </div>
+          <div class="filter-options" id="diameter">
+            <label><input type="checkbox" /> 14</label>
+            <label><input type="checkbox" /> 15</label>
+            <label><input type="checkbox" /> 16</label>
+          </div>
+        </div>
+        <div class="filter">
+          <span>Сезонность</span>
+          <select>
+            <option>Всесезонная</option>
+            <option>Зимняя нешипованная</option>
+            <option>Зимняя шипованная</option>
+            <option>Летняя</option>
+          </select>
+        </div>
+        <div class="filter">
+          <span>Бренд</span>
+          <select>
+            <option>Bridgestone</option>
+            <option>Michelin</option>
+            <option>Continental</option>
+            <option>Goodyear</option>
+          </select>
+        </div>
+        <div class="filter">
+          <span>Тип шины</span>
+          <select>
+            <option>SUV</option>
+            <option>Коммерческая</option>
+            <option>Легковая</option>
+          </select>
+        </div>
+        <div class="filter">
+          <span>Индекс скорости</span>
+          <select>
+            <option>Q</option>
+            <option>R</option>
+            <option>S</option>
+          </select>
+        </div>
+        <div class="filter">
+          <span>Индекс нагрузки</span>
+          <div class="range-wrapper">
+            <span class="range-label">61</span>
+            <input type="range" min="61" max="190" value="100" id="loadRange" />
+            <span class="range-label">190</span>
+          </div>
+          <div class="range-value">Выбрано: <span id="loadValue">100</span></div>
+        </div>
+        <div class="filter">
+          <span>Усиленная шина</span>
+          <select>
+            <option>Да</option>
+            <option>Нет</option>
+          </select>
+        </div>
+        <div class="filter">
+          <span>Срок доставки (дней)</span>
+          <div class="range-wrapper">
+            <span class="range-label">0</span>
+            <input type="range" min="0" max="30" value="5" id="deliveryRange" />
+            <span class="range-label">30</span>
+          </div>
+          <div class="range-value">Выбрано: <span id="deliveryValue">5</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+</body>
+<script src="script.js"></script>
+<script src="script-profile.js"></script>
+<script src="header.js" defer></script>
+</html> -->
+
+
+

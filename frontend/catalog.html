@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMEX</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-profile.css">
+    <link rel="stylesheet" href="style-catalog.css">
+    <link rel="SHORTCUT ICON" href="img/img2/favicon.svg" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+        <div class="white-background">
+            <div class="content-wrapper">
+                <div class="top-bar">
+                    <div class="content-container">
+                    </div>
+                    <div class="header-buttons">
+                        <button id="login-btn" class="login-btn">Вход</button>
+                        <div id="profile-btn-container" style="display:none;">
+                            <button id="profile-btn" class="login-btn"></button>
+                            <div id="profile-dropdown" style="display:none;">
+                                <button id="profile-link" class="login-btn">Профиль</button>
+                                <button id="logout-btn" class="login-btn">Выход</button>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <div class="yellow-background">
+            <div class="content-wrapper">
+              <div class="main-bar">
+                <div class="logo">
+                  <img src="img/logo.svg" alt="Логотип" class="logo-icon">
+                </div>
+                <div class="search-wrapper">
+                  <input type="text" class="search-input" placeholder="Поиск...">
+                  <button class="search-button">
+                    <img src="img/search.svg" alt="Поиск" class="search-icon">
+                  </button>
+                </div>
+                <a href="cart.html" class="cart-link">
+                  <div class="cart">
+                    <img src="img/cart.svg" alt="Корзина" class="icon">
+                    <span class="cart-text">Корзина</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        <div class="black-background">
+        <div class="content-wrapper">
+        <nav class="nav-bar" id="main-nav">
+                    <a href="index.html">Главная</a>
+                    <a href="job.html">Вакансии</a>
+                    <a href="about-company.html">О компании</a>
+                    <a href="contact.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+      <div class="container">
+        <aside class="sidebar">
+          <h2 class="sidebar-title">Категории</h2>
+          <ul class="category-list" id="categoryList">
+            <li><button class="category-btn active" data-category="all">Все</button></li>
+               <!-- 54 -->
+            <li><button class="category-btn" data-category="Шины">Шины</button></li> 
+            <li><button class="category-btn" data-category="Диски">Диски</button></li>
+            <li><button class="category-btn" data-category="Камеры">Камеры</button></li>
+            <li><button class="category-btn" data-category="Масла">Масла</button></li>
+            <li><button class="category-btn" data-category="Жидкости">Жидкости</button></li>
+            <li><button class="category-btn" data-category="Смазки">Смазки</button></li>
+            <li><button class="category-btn" data-category="Уход и чистка">Уход и чистка</button></li>
+            <li><button class="category-btn" data-category="Автокосметика">Автокосметика</button></li>
+            <li><button class="category-btn" data-category="Аккумуляторы">Аккумуляторы</button></li>
+            <li><button class="category-btn" data-category="Батарейки">Батарейки</button></li>
+            <li><button class="category-btn" data-category="Лампы">Лампы</button></li>
+            <li><button class="category-btn" data-category="Мойки высокого давления">Мойки высокого давления</button></li>
+            <li><button class="category-btn" data-category="Подметальные машины">Подметальные машины</button></li>
+            <li><button class="category-btn" data-category="Провода пусковые">Провода пусковые</button></li>
+            <li><button class="category-btn" data-category="Пылесосы">Пылесосы</button></li>
+            <li><button class="category-btn" data-category="Устройства пуско-зарядные">Устройства пуско-зарядные</button></li>
+            <li><button class="category-btn" data-category="Компрессоры">Компрессоры</button></li>
+            <li><button class="category-btn" data-category="Насосы и манометры">Насосы и манометры</button></li>
+            <li><button class="category-btn" data-category="Видеорегистраторы">Видеорегистраторы</button></li>
+            <li><button class="category-btn" data-category="Автозвук">Автозвук</button></li>
+            <li><button class="category-btn" data-category="Парковочные радары и камеры">Парковочные радары и камеры</button></li>
+            <li><button class="category-btn" data-category="Противоугонные устройства">Противоугонные устройства</button></li>
+            <li><button class="category-btn" data-category="Подогреватели двигателя">Подогреватели двигателя</button></li>
+            <li><button class="category-btn" data-category="Радар-детекторы">Радар-детекторы</button></li>
+            <li><button class="category-btn" data-category="Головки торцевые">Головки торцевые</button></li>
+            <li><button class="category-btn" data-category="Домкраты">Домкраты</button></li>
+            <li><button class="category-btn" data-category="Ключи баллонные">Ключи баллонные</button></li>
+            <li><button class="category-btn" data-category="Отвёртки">Отвёртки</button></li>
+            <li><button class="category-btn" data-category="Хомуты">Хомуты</button></li>
+            <li><button class="category-btn" data-category="Инструменты">Инструмент</button></li>
+            <li><button class="category-btn" data-category="Защита на автомобиль">Защита на автомобиль</button></li>
+            <li><button class="category-btn" data-category="Фаркопы">Фаркопы</button></li>
+            <li><button class="category-btn" data-category="Багажные системы">Багажные системы</button></li>
+            <li><button class="category-btn" data-category="Внешний декор">Внешний декор</button></li>
+            <li><button class="category-btn" data-category="Щётки стеклоочистителя">Щётки стеклоочистителя</button></li>
+            <li><button class="category-btn" data-category="Автоодеяла">Автоодеяла</button></li>
+            <li><button class="category-btn" data-category="Защита и гигиена">Защита и гигиена</button></li>
+            <li><button class="category-btn" data-category="Герметики">Герметики</button></li>
+            <li><button class="category-btn" data-category="Клеи">Клеи</button></li>
+            <li><button class="category-btn" data-category="Канистры">Канистры</button></li>
+            <li><button class="category-btn" data-category="Ремни поликлиновые">Ремни поликлиновые</button></li>
+            <li><button class="category-btn" data-category="Светофильтры">Светофильтры</button></li>
+            <li><button class="category-btn" data-category="Автолитература">Автолитература</button></li>
+            <li><button class="category-btn" data-category="Лебёдки">Лебёдки</button></li>
+          </ul>
+        </aside>
+      </aside>
+      
+      <main class="main-content">
+        <div id="catalogGrid" class="catalog-grid">
+          <!-- Здесь будут отображаться товары -->
+        </div>        
+      </main>
+      
+      
+  </div>
+    
+
+    <div class="footer">
+        <span class="footer-text">emex</span>
+    </div>
+    </body>
+    <script src="script.js"></script>
+    <script src="script-profile.js"></script>
+    <script src="header.js" defer></script>
+    <script src="script-auth.js"></script>
+    <script src="script-catalog.js"></script>
+    </html>

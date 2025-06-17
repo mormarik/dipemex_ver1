@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>EMEX - Заказ оформлен</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-checkout.css">
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header">
+    <!-- Твой хедер из profile.html или cart.html -->
+  </header>
+
+  <!-- Успех -->
+  <main class="success-main">
+    <h2 class="success-title">✅ Заказ оформлен!</h2>
+    <p class="success-message">Спасибо за покупку. Мы свяжемся с вами по телефону и подтвердим детали.</p>
+
+    <div class="order-details">
+      <h3>Детали заказа:</h3>
+      <ul id="success-products-list"></ul>
+      <p id="success-total-price" class="success-total">Итого: 0 ₽</p>
+    </div>
+
+    <a href="profile.html" class="btn-home">Перейти к профилю</a>
+  </main>
+
+  <!-- Подвал -->
+  <div class="footer">
+    <span class="footer-text">emex</span>
+  </div>
+
+  <!-- Скрипт для страницы успеха -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const order = JSON.parse(localStorage.getItem('last-order'));
+      const productList = document.getElementById('success-products-list');
+      const totalPriceDiv = document.getElementById('success-total-price');
+
+      if (!order || !productList || !totalPriceDiv) {
+        productList.innerHTML = '<li>Нет данных о заказе</li>';
+        totalPriceDiv.textContent = 'Итого: 0 ₽';
+        return;
+      }
+
+      order.items.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span>${item.name}</span>
+          <span>${item.price} × ${item.quantity} = ${item.price * item.quantity} ₽</span>
+        `;
+        productList.appendChild(li);
+      });
+
+      totalPriceDiv.textContent = `Итого: ${order.total} ₽`;
+    });
+  </script>
+</body>
+</html>

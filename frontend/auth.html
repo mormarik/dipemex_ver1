@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMEX</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style-auth.css">
+    <link rel="stylesheet" href="style-catalog.css">
+    <link rel="SHORTCUT ICON" href="img/img2/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="page-wrapper">
+   <header class="header">
+        <div class="white-background">
+            <div class="content-wrapper">
+                <div class="top-bar">
+                    <div class="content-container">
+                    </div>
+                    <div class="header-buttons">
+                        <button id="login-btn" class="login-btn">Вход</button>
+                        <div id="profile-btn-container" style="display:none;">
+                            <button id="profile-btn" class="login-btn"></button>
+                            <div id="profile-dropdown" style="display:none;">
+                                <button id="profile-link" class="login-btn">Профиль</button>
+                                <button id="logout-btn" class="login-btn">Выход</button>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <div class="yellow-background">
+            <div class="content-wrapper">
+              <div class="main-bar">
+                <div class="logo">
+                  <img src="img/logo.svg" alt="Логотип" class="logo-icon">
+                </div>
+                <div class="search-wrapper">
+                  <input type="text" class="search-input" placeholder="Поиск...">
+                  <button class="search-button">
+                    <img src="img/search.svg" alt="Поиск" class="search-icon">
+                  </button>
+                </div>
+                <a href="cart.html" class="cart-link">
+                  <div class="cart">
+                    <img src="img/cart.svg" alt="Корзина" class="icon">
+                    <span class="cart-text">Корзина</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        <div class="black-background">
+        <div class="content-wrapper">
+        <nav class="nav-bar" id="main-nav">
+                    <a href="index.html">Главная</a>
+                    <a href="job.html">Вакансии</a>
+                    <a href="about-company.html">О компании</a>
+                    <a href="contact.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+    <div id="register-form" class="form-container">
+        <h2>Регистрация</h2>
+        <form action="/register" method="POST">
+            <input type="text" id="register-username" name="username" placeholder="Имя" required>
+            <input type="email" id="register-email" name="email" placeholder="Email" required>
+            <input type="password" id="register-password" name="password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p>Уже есть аккаунт? <a href="javascript:void(0);" onclick="toggleForms('login')">Войти</a></p>
+    </div>
+    <div id="login-form" class="form-container" style="display:none;">
+        <h2>Вход</h2>
+        <form action="/login" method="POST">
+            <input type="email" id="login-email" name="email" placeholder="Email" required>
+            <input type="password" id="login-password" name="password" placeholder="Пароль" required>            
+            <button type="submit">Войти</button>
+        </form>
+        <p>Забыли пароль? <a href="javascript:void(0);" onclick="toggleForms('reset')">Восстановить пароль</a></p>
+        <p>Нет аккаунта? <a href="javascript:void(0);" onclick="toggleForms('register')">Зарегистрироваться</a></p>
+    </div>
+    <div id="reset-form" class="form-container" style="display:none;">
+        <h2>Восстановление пароля</h2>
+        <form action="/reset-password" method="POST">
+            <input type="email" name="email" placeholder="Email" required><br>
+            <button type="submit">Отправить ссылку для восстановления</button>
+        </form>
+        <p>Помните пароль? <a href="javascript:void(0);" onclick="toggleForms('login')">Войти</a></p>
+    </div>
+</main>
+    <div id="message-container" style="display:none; padding: 10px; margin: 20px 0; background-color: #f1f1f1; border: 1px solid #ccc;"></div>
+    <div class="footer">
+        <span class="footer-text">emex</span>
+    </div>
+    </div>
+    
+</body>
+<script src="header.js"></script>
+<script src="script.js"></script>
+<script src="script-profile.js"></script>
+<script src="script-auth.js"></script>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMEX</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-company.css">
+    <link rel="SHORTCUT ICON" href="img/img2/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="white-background">
+            <div class="content-wrapper">
+                <div class="top-bar">
+                    <div class="content-container">
+                    </div>
+                    <div class="header-buttons">
+                        <button id="login-btn" class="login-btn">Вход</button>
+                        <div id="profile-btn-container" style="display:none;">
+                            <button id="profile-btn" class="login-btn"></button>
+                            <div id="profile-dropdown" style="display:none;">
+                                <button id="profile-link" class="login-btn">Профиль</button>
+                                <button id="logout-btn" class="login-btn">Выход</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yellow-background">
+            <div class="content-wrapper">
+              <div class="main-bar">
+                <div class="logo">
+                  <img src="img/logo.svg" alt="Логотип" class="logo-icon">
+                </div>
+                <div class="search-wrapper">
+                  <input type="text" class="search-input" placeholder="Поиск...">
+                  <button class="search-button">
+                    <img src="img/search.svg" alt="Поиск" class="search-icon">
+                  </button>
+                </div>
+                <a href="cart.html" class="cart-link">
+                  <div class="cart">
+                    <img src="img/cart.svg" alt="Корзина" class="icon">
+                    <span class="cart-text">Корзина</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+        <div class="black-background">
+            <div class="content-wrapper">
+                <nav class="nav-bar">
+                    <a href="index.html">Главная</a>
+                    <a href="job.html">Вакансии</a>
+                    <a href="about-company.html">О компании</a>
+                    <a href="contact.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="highlight-boxes">
+        <div class="highlight-box black-box">
+          <div class="black-box__text">
+            <h2>Магазины в 120 городах России и СНГ</h2>
+            <p>За счет широкой географии на Эмексе найдется всё, даже самые редкие товары</p>
+          </div>
+          <img src="img/img2/earth2x.svg" alt="Earth" class="black-box__image" />
+        </div>
+        <div class="gray-box">
+            <div class="gray-box__content">
+              <h2>Почему у нас выгодно покупать</h2>
+              <div class="divider"></div>
+          
+              <div class="benefits">
+                <div class="benefit">
+                  <strong>Лучшие продавцы с уникальным ассортиментом</strong><br>
+                  47 миллионов товаров
+                </div>
+                <div class="benefit">
+                  <strong>Покупатели по всей России и в странах СНГ</strong><br>
+                  50 000 заказов в день
+                </div>
+              </div>
+              <div class="divider"></div>
+            </div>
+          </div>
+    </section>
+    <section class="delivery-section">
+        <div class="delivery-long gray-bg">
+          <img src="img/img2/carEmpty.svg" alt="Доставка" class="delivery-icon" />
+          <p class="delivery-text">Привозим автотовары в пункты выдачи за свой счет</p>
+        </div>
+        <div class="delivery-column">
+          <div class="delivery-box black-box">
+            <h3>1900 пунктов выдачи</h3>
+            <p>Пункт выдачи рядом с вами. Сотрудники подберут подходящую деталь для вашего авто по лучшей цене</p>
+          </div>
+          <div class="delivery-box yellow-box">
+            <img src="img/img2/ordersWhiteBoxes.svg" alt="Заказы" class="yellow-bg-icon" />
+            <h3>50 000 заказов в день</h3>
+            <p>Помогаем бизнесу находить новых покупателей, а покупателям — надежных продавцов и поставщиков</p>
+          </div>
+        </div>
+      </section>
+            <div class="stores-section">
+                <div class="stores-header">
+                    <span>Магазины в вашем городе</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="map-container">
+                    <script type="text/javascript" charset="utf-8" async 
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf322cd394a1addd4829397b42992c7c01701f04d4015d29858b745ca8b181da&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+                    </script>
+                </div>
+            </div> 
+    <div class="footer">
+        <span class="footer-text">emex</span>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="script-profile.js"></script>
+<script src="header.js" defer></script>
+</html>

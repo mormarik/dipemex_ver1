@@ -1,0 +1,9 @@
+# 1. Распаковать архив
+# 2. Перейти в папку проекта
+cd C:\Users\Asus\Desktop\emex-project\backend
+
+# 3. Установить зависимости
+npm install
+
+# 4. Запустить сервер
+node server.js
